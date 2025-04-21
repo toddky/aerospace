@@ -90,6 +90,11 @@ cmd-alt-right = 'move right'
 # fullscreen off [--window-id <window-id>] [--fail-if-noop]
 cmd-alt-f = 'fullscreen'
 
+# resize [--window-id <window-id>] (smart|smart-opposite|width|height) [+|-]<number>
+cmd-alt-equal = 'resize smart +50'
+cmd-alt-minus = 'resize smart -50'
+
+
 cmd-alt-slash = 'layout tiles horizontal vertical'
 cmd-alt-comma = 'layout accordion horizontal vertical'
 
