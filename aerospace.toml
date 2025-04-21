@@ -16,6 +16,7 @@ exec-on-workspace-change = ['/bin/bash', '-c',
     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
 ]
 
+
 # ==============================================================================
 # GAPS
 # ==============================================================================
@@ -62,12 +63,26 @@ cmd-alt-j = 'focus down'
 cmd-alt-k = 'focus up'
 cmd-alt-l = 'focus right'
 
+# Move workspaces
+# move-workspace-to-monitor <workspace>] [--wrap-around] (left|down|up|right)
+# move-workspace-to-monitor [--workspace <workspace>] [--wrap-around] (next|prev)
+# move-workspace-to-monitor [--workspace <workspace>] <monitor-pattern>...
+shift-cmd-alt-right = 'move-workspace-to-monitor right'
+shift-cmd-alt-left  = 'move-workspace-to-monitor left'
+
+# Move windows
+# move-node-to-workspace [--focus-follows-window] [--wrap-around]
+#                        (next|prev)
+# move-node-to-workspace [--focus-follows-window] [--fail-if-noop]
+#                        [--window-id <window-id>] <workspace-name>
+shift-cmd-alt-down = 'move-node-to-workspace next'
+shift-cmd-alt-up   = 'move-node-to-workspace prev'
+
 # Move windows
 # move [--window-id <window-id>] (left|down|up|right)
-# https://nikitabobko.github.io/AeroSpace/commands#move
-cmd-alt-left = 'move left'
-cmd-alt-down = 'move down'
-cmd-alt-up = 'move up'
+cmd-alt-left  = 'move left'
+cmd-alt-down  = 'move down'
+cmd-alt-up    = 'move up'
 cmd-alt-right = 'move right'
 
 # fullscreen [--window-id <window-id>] [--no-outer-gaps]
