@@ -1,0 +1,72 @@
+
+# ==============================================================================
+# SETTINGS
+# ==============================================================================
+start-at-login = true
+after-startup-command = [
+	'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
+]
+
+
+# ==============================================================================
+# GAPS
+# ==============================================================================
+[gaps]
+inner.horizontal = 10
+inner.vertical   = 10
+outer.left       = 10
+outer.bottom     = 10
+outer.top        = 32
+outer.right      = 10
+
+
+# ==============================================================================
+# MAIN
+# ==============================================================================
+[mode.main.binding]
+
+# Remove mapping to hide windows
+cmd-h = []
+
+cmd-alt-r = 'reload-config'
+
+# Navigate displays
+# focus-monitor [--wrap-around] (left|down|up|right)
+# focus-monitor [--wrap-around] (next|prev)
+# focus-monitor <monitor-pattern>...
+shift-cmd-alt-h = 'focus-monitor left'
+shift-cmd-alt-l = 'focus-monitor right'
+
+# Navigate workspaces
+# workspace [--auto-back-and-forth] [--fail-if-noop] <workspace-name>
+# workspace [--wrap-around] (next|prev)
+shift-cmd-alt-j = 'workspace next'
+shift-cmd-alt-k = 'workspace prev'
+
+# Navigate windows
+# focus [--ignore-floating]
+#       [--boundaries <boundary>] [--boundaries-action <action>]
+#       (left|down|up|right)
+# focus --window-id <window-id>
+# focus --dfs-index <dfs-index>
+cmd-alt-h = 'focus left'
+cmd-alt-j = 'focus down'
+cmd-alt-k = 'focus up'
+cmd-alt-l = 'focus right'
+
+# Move windows
+# move [--window-id <window-id>] (left|down|up|right)
+# https://nikitabobko.github.io/AeroSpace/commands#move
+cmd-alt-left = 'move left'
+cmd-alt-down = 'move down'
+cmd-alt-up = 'move up'
+cmd-alt-right = 'move right'
+
+# fullscreen [--window-id <window-id>] [--no-outer-gaps]
+# fullscreen on  [--window-id <window-id>] [--no-outer-gaps] [--fail-if-noop]
+# fullscreen off [--window-id <window-id>] [--fail-if-noop]
+cmd-alt-f = 'fullscreen'
+
+cmd-alt-slash = 'layout tiles horizontal vertical'
+cmd-alt-comma = 'layout accordion horizontal vertical'
+
