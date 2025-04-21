@@ -4,9 +4,17 @@
 # ==============================================================================
 start-at-login = true
 after-startup-command = [
-	'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
+	#'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
+	'exec-and-forget borders active_color=0xff6060b0 inactive_color=0xff000010 width=10.0'
 ]
 
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focus-changed = ['move-mouse window-lazy-center']
+
+# https://nikitabobko.github.io/AeroSpace/goodness#show-aerospace-workspaces-in-sketchybar
+exec-on-workspace-change = ['/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
 
 # ==============================================================================
 # GAPS
