@@ -13,7 +13,7 @@ on-focus-changed = ['move-mouse window-lazy-center']
 
 # https://nikitabobko.github.io/AeroSpace/goodness#show-aerospace-workspaces-in-sketchybar
 exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+	'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
 ]
 
 # Move window by holding Cmd+Ctrl
@@ -30,6 +30,22 @@ outer.left       = 10
 outer.bottom     = 10
 outer.top        = 32
 outer.right      = 10
+
+
+# ==============================================================================
+# KEYS
+# ==============================================================================
+# - Letters.        a, b, c, ..., z
+# - Numbers.        0, 1, 2, ..., 9
+# - Keypad numbers. keypad0, keypad1, keypad2, ..., keypad9
+# - F-keys.         f1, f2, ..., f20
+# - Special keys.   minus, equal, period, comma, slash, backslash, quote, semicolon,
+#                   backtick, leftSquareBracket, rightSquareBracket, space, enter, esc,
+#                   backspace, tab, pageUp, pageDown, home, end, forwardDelete,
+#                   sectionSign (ISO keyboards only, european keyboards only)
+# - Keypad special. keypadClear, keypadDecimalMark, keypadDivide, keypadEnter, keypadEqual,
+#                   keypadMinus, keypadMultiply, keypadPlus
+# - Arrows.         left, down, up, right
 
 
 # ==============================================================================
@@ -97,9 +113,29 @@ cmd-alt-f = 'fullscreen'
 cmd-alt-equal = 'resize smart +50'
 cmd-alt-minus = 'resize smart -50'
 
+# Layout
+shift-cmd-alt-comma  = 'layout tiles horizontal vertical'
+shift-cmd-alt-period = 'layout accordion horizontal vertical'
 
-cmd-alt-slash = 'layout tiles horizontal vertical'
-cmd-alt-comma = 'layout accordion horizontal vertical'
+# Join
+cmd-alt-comma  = 'join-with left'
+cmd-alt-period = 'join-with right'
+
+# Screenshot
+#ctrl-s = 'exec-and-forget mac-ss'
+ctrl-s = "exec-and-forget /Users/tyamakawa/bin/mac-ss"
+
+# Workspaces
+cmd-alt-1 = 'workspace 1'
+cmd-alt-2 = 'workspace 2'
+cmd-alt-3 = 'workspace 3'
+cmd-alt-4 = 'workspace 4'
+cmd-alt-5 = 'workspace 5'
+cmd-alt-6 = 'workspace 6'
+cmd-alt-7 = 'workspace 7'
+cmd-alt-8 = 'workspace 8'
+cmd-alt-9 = 'workspace 9'
+
 
 # cmd-alt-semicolon = 'mode workspace'
 # 
@@ -119,3 +155,5 @@ cmd-alt-comma = 'layout accordion horizontal vertical'
 # 9 = ['workspace 9', 'mode main']
 # 
 # 
+
+
