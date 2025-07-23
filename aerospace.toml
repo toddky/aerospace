@@ -114,10 +114,11 @@ shift-cmd-alt-up   = 'move-node-to-workspace prev'
 
 # Move windows
 # move [--window-id <window-id>] (left|down|up|right)
-cmd-alt-left  = 'move left'
+# https://github.com/nikitabobko/AeroSpace/issues/183
+cmd-alt-left  = 'move left --boundaries all-monitors-outer-frame'
+cmd-alt-right = 'move right --boundaries all-monitors-outer-frame'
 cmd-alt-down  = 'move down'
 cmd-alt-up    = 'move up'
-cmd-alt-right = 'move right'
 
 # fullscreen [--window-id <window-id>] [--no-outer-gaps]
 # fullscreen on  [--window-id <window-id>] [--no-outer-gaps] [--fail-if-noop]
