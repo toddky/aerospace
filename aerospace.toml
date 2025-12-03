@@ -130,6 +130,7 @@ cmd-alt-equal = 'resize smart +50'
 cmd-alt-minus = 'resize smart -50'
 
 # Layout
+cmd-alt-t = 'layout floating tiling'
 shift-cmd-alt-comma  = 'layout tiles horizontal vertical'
 shift-cmd-alt-period = 'layout accordion horizontal vertical'
 
